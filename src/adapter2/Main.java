@@ -16,5 +16,20 @@ public class Main {
 		gui.setPreferredSize(
 			      new java.awt.Dimension(300, 200));
 		gui.setVisible(true);
+		
+		
+		Covid19Pacient pacient2=new Covid19Pacient("ane", 24, new SymptomFactory());
+		
+		pacient2.addSymptomByName("fiebre", 2);
+		pacient2.addSymptomByName("diarrea", 1);
+		pacient2.addSymptomByName("anosmia", 3);
+		
+		ShowPacientTableGUI gui2=new ShowPacientTableGUI(pacient2);
+		
+		gui2.setPreferredSize(
+			      new java.awt.Dimension(300, 200));
+		gui2.setVisible(true);
+		
+		
 	}
 }
