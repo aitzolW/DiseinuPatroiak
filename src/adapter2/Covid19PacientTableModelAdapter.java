@@ -10,11 +10,11 @@ import domain.Symptom;
 public class Covid19PacientTableModelAdapter extends AbstractTableModel {
 	  protected Covid19Pacient pacient;
 	  protected String[] columnNames = new String[] {"Symptom", "Weight" };
-	  protected Vector<Symptom> symptoms;
+	 
 
 	  public Covid19PacientTableModelAdapter(Covid19Pacient p) {
 	    this.pacient=p;
-	    symptoms = new Vector<>(p.getSymptoms());
+	   // symptoms = new Vector<>(p.getSymptoms());
 	  }
 
 	  public int getColumnCount() {
@@ -30,9 +30,10 @@ public class Covid19PacientTableModelAdapter extends AbstractTableModel {
 	  }
 
 	  public Object getValueAt(int row, int col) {
+		  Vector<Symptom> symptoms = new Vector<> (pacient.getSymptoms()); 
 		  if(col==0) { //Symptoms
 			  return symptoms.get(row).getName();
-		  }if (col==1){ //Weight
+		  }else if (col==1){ //Weight
 			  return pacient.getWeight(symptoms.get(row));
 		  }
 		  return null;

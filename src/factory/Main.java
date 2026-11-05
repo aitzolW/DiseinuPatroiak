@@ -6,9 +6,10 @@ import domain.Medicament;
 public class Main {
 
 	public static void main(String[] args) {
-		Covid19Pacient p1=new Covid19Pacient("aitor", 35, new SymptomFactory());
+		SymptomFactory fs = new SymptomFactory();
+		Covid19Pacient p1=new Covid19Pacient("aitor", 35, fs);
 		new PacientSymptomGUI(p1);
-		new MedicalGUI(new Medicament("Ibuprofeno", new SymptomFactory()));
+		new MedicalGUI(new Medicament("Ibuprofeno", fs));
 
 	}
 

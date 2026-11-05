@@ -37,8 +37,7 @@ public class ShowPacientTableGUI extends JFrame implements Observer {
 	    pane.setPreferredSize(
 	      new java.awt.Dimension(300, 200));
 	    this.getContentPane().add(pane);
-	    
-	  
+	    this.pack();
   }
 
   private static void setFonts() {
